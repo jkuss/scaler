@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	font-size: 62.5%;
+
+}
+
+.scaler{
+	position:relative;
+	
+	width: 100%;
+	height: 60%;
+	
+	background-image: url(hug.jpg);
+	
+	background-repeat: no-repeat;
+	background-color: #000000;
+	background-position: 29% 36%;
+}
+
+.scaler .caption{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	background-color: rgba(0,20,30,0.6);
+	color: white;
+	font-family: Georgia, serif;
+	font-size: 1.8em;
+	font-style: italic;
+	
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.desc{
+	width: 500px;
+	margin: 40px auto;
+	
+	font-size: 18px;
+	padding-bottom: 100px;
+	
+	font-family: Helvetica, sans-serif;
+}
+
+p{
+	margin: 0 0 20px 0;
+}
+
+code{
+	font-size: 14px;
+	background-color: #dadada;
+}
+
+@media all and (max-width:700px){
+	.scaler{
+		background-size: 800px;
+	}
+	
+	.scaler .caption{
+		font-size: 1.2em;
+	}
+	
+	.desc{
+		width: 300px;
+	}
+}
+
+
+</style>
+
+<title>Responsive Scaling While Keeping Focus</title>
+
+</head>
+<body>
+
+<div class="scaler">
+	<div class="caption">President Obama Reelected</div>
+</div>
+
+<div class="desc">
+	<p>The image above is set with a <code>background-position</code> property set in percent. That number is equal to the point of focus in the image from the top left corner as a percentage of the whole image (the Obamas' heads in this case). </p>
+	<p>As you scale the window, the image moves to keep that point of focus centered relative to its original position.</p>
+	<p>This works great for sites with large hero images (such as <a href="http://polygon.com">Polygon</a>) that need to fill the width of their container and still keep their subjects in focus when the window is smaller.</p>
+	<p>For the best effect either fade the image at the edges to a solid background color or select a background color that will mesh well with the image when the window is larger than the image.</p>
+	<p>This technique is supported <a href="http://www.standardista.com/css3/css3-background-properties/">down to IE6</a> and still works when combined with <code>background-size</code> (though <code>background-size</code> is not supported until IE9)</p>
+	<p><strong ><a href="http://juliankussman.com">Julian Kussman</a></strong></p>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31230843-1']);
+  _gaq.push(['_setCampNameKey', 'regiffer']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
